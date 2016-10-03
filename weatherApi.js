@@ -11,12 +11,12 @@ const getWeather = function(query) {
 
         const httpReq = http.get(options, (httpRes) => {
             // Buffer the body entirely for processing as a whole.
-            let bodyChunks = [];
+            const bodyChunks = [];
             httpRes.on('data', (chunk) => {
                 // You can process streamed parts here...
                 bodyChunks.push(chunk);
             }).on('end', function() {
-                let body = Buffer.concat(bodyChunks);
+                const body = Buffer.concat(bodyChunks);
                 //TODO add some stuff here to make it more robust
                 resolve(JSON.parse(body));
             });
