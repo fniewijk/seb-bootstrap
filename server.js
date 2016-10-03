@@ -5,7 +5,7 @@ var app = express();
 //connect express to the handlebars rendering engine.
 var exphbs = require('express-handlebars');
 
-var weatherApi = require('./weatherApi.js');
+//var weatherApi = require('./weatherApi.js');
 
 //set handlebars to be used as a rendering engine
 app.engine('hbs', exphbs({
@@ -20,15 +20,15 @@ app.get('/', function (req, res) {
    res.render('index',{ 'title': 'I am rendered into the template'});
 });
 
-// //TODO finish the weather app.
-app.get('/weather', function (req, res) {
-//     //TODO do an AJAX request.
-//     //Use the 'http' module.
-      weatherApi.getWeather('London').then(function(data){
-        //render here
-        res.render('weather',{ 'data': data });
-      });
-});
+// // //TODO finish the weather app.
+// app.get('/weather', function (req, res) {
+// //     //TODO do an AJAX request.
+// //     //Use the 'http' module.
+//       weatherApi.getWeather('London').then(function(data){
+//         //render here
+//         res.render('weather',{ 'data': data });
+//       });
+// });
 
 //
 //     //render the weather data in the weather.hbs template.
