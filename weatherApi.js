@@ -9,7 +9,7 @@ const getWeather = function(query) {
             method: 'GET'
         };
 
-        let httpReq = http.get(options, (httpRes) => {
+        const httpReq = http.get(options, (httpRes) => {
             // Buffer the body entirely for processing as a whole.
             let bodyChunks = [];
             httpRes.on('data', (chunk) => {
