@@ -1,5 +1,7 @@
 <div>
-    <ul>
-      {{ data }}
-    </ul>
+  {{#each data}}
+        <p>{{WeatherText}}</p>
+        <p>Temp: {{Temperature.Metric.Value}} {{Temperature.Metric.Unit}}</p>
+        <img src='/assets/images/{{WeatherIcon}}-s.png'></img>
+  {{/each}}
 </div>

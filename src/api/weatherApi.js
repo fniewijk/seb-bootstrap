@@ -21,7 +21,7 @@ const getNewWeather = function(query) {
   };
 
   return new SebApi.apiCall(options).then(function(data){
-      return data[0].WeatherText;
+      return data;
   });
 }
 

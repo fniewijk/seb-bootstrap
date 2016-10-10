@@ -12,7 +12,7 @@
 	margin: 1% 0 1% 1.6%;
   background-color: #7fa5e2;
   text-align: center;
-  border-radius: 40px;
+  border-radius: 8px;
 }
 .col:first-child { margin-left: 0; }
 
@@ -45,11 +45,17 @@
 h1 {
   background-color: #7fa5e2;
   text-align: center;
-  border-radius: 60px;
+  border-radius: 8px;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-weight: normal;
 }
 
 a {
   color: white;
-  font-family: "lucida sans unicode", "lucida grande", sans-serif;
   text-decoration: none;
+	font-size: 2em;
+}
+
+div {
+	font-family: Tahoma, Geneva, sans-serif;
 }
