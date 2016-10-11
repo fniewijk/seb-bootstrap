@@ -1,11 +1,18 @@
 # seb-bootstrap
 
-run npm install
+Run
 
-then
+npm install
+
+Then
 
 node server.js
 
-# TODO
+# Features
 
-call a Weather API with a Promise and display the London weather of today in a template.
+Express
+Handlebars
+CSS
+jQuery
+Responsive grid menu
+Weather API

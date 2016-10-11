@@ -4,7 +4,7 @@ const express = require('express');
 const app = express();
 
 app.get('/', function (req, res) {
-  weatherApi.getNewLocationKey('Hanoi').then(function(key){
+  weatherApi.getNewLocationKey('Bali').then(function(key){
     weatherApi.getNewWeather(key).then(function(data){
       res.render('weather', {'data': data});
       }, function(error){
@@ -15,7 +15,6 @@ app.get('/', function (req, res) {
     console.log('get location key weather', error);
     res.render('weather',{ 'data': 'something went wrong' });
   });
-}
-);
+});
 
 module.exports = app;

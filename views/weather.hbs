@@ -1,4 +1,17 @@
 <div>
+  {{title}}
+</div>
+
+<div>
+  <input type="search" id="weatherSearch">
+  <input type="submit" value="Search">
+</div>
+
+<div>
+  <p id="demo"></p>
+</div>
+
+<div>
   {{#each data}}
         <p>{{WeatherText}}</p>
         <p>Temp: {{Temperature.Metric.Value}} {{Temperature.Metric.Unit}}</p>
