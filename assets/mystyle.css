@@ -63,4 +63,12 @@ a {
 div {
   font-family: Tahoma, Geneva, sans-serif; }
 
-/*# sourceMappingURL=mystyle.min.css.map */
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto }
+
+div .title {
+  display: block;
+  margin-left: auto;
+  margin-right: auto }
