@@ -18,6 +18,10 @@ CSS
 
 jQuery
 
+Webpack
+
+Sass
+
 Responsive grid menu
 
-Weather API
+Search weather API

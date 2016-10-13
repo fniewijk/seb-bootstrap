@@ -1,5 +1,5 @@
-$(document).ready(function(){
-
+module.exports = function(){
+  
   $(".col").mouseover(function(){
     $(this).css('background-color', '#598ad9');
     $(this).css('border-radius', '3px');
@@ -26,11 +26,4 @@ $(document).ready(function(){
     });
   });
 
-  document.getElementById("weatherSearch").addEventListener("search", myFunction);
-
-  function myFunction() {
-    var x = document.getElementById("weatherSearch");
-    document.getElementById("demo").innerHTML = "You are searching for weather in: " + x.value;
-  }
-
-});
+}

@@ -7,7 +7,7 @@ module.exports = {
       const httpReq = http.request(options, (httpRes) => {
         // Buffer the body entirely for processing as a whole.
         const bodyChunks = [];
-        console.log(httpRes);
+        //console.log(httpRes);
         httpRes.on('data', (chunk) => {
           // You can process streamed parts here...
           bodyChunks.push(chunk);
