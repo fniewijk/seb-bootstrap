@@ -1,18 +1,19 @@
+<div class="title">
+  {{ title }}
+</div>
 <div>
   <form action="/weather" method="get">
     <input type="search" name="weatherSearch" id="weatherSearch">
-    <input type="submit" value="Search">
+    <input type="submit" value="Search" id="searchButton">
   </form>
 </div>
-
 <div>
-  <p>{{location}}</p>
+  <h2>{{location}}</h2>
 </div>
-
 <div>
   {{#each data}}
-        <p>{{WeatherText}}</p>
-        <p>Temp: {{Temperature.Metric.Value}} {{Temperature.Metric.Unit}}</p>
-        <img src='/assets/images/{{WeatherIcon}}-s.png' style="width:20%"></img>
+        <p>Weather: {{WeatherText}}</p>
+        <p>Temperature: {{Temperature.Metric.Value}} {{Temperature.Metric.Unit}}</p>
+        <img src='/assets/images/{{WeatherIcon}}-s.png' style="width:150px"></img>
   {{/each}}
 </div>

@@ -1,3 +1,5 @@
+$color: #7fa5e2;
+
 /*section set up*/
 .section {
   clear: both;
@@ -6,7 +8,7 @@
   text-align: center;
   font-family: Tahoma, Geneva, sans-serif;
   font-weight: normal;
-  background-color: #7fa5e2;
+  background-color: $color;
   border-radius: 8px; }
 
 /*menuColumn set up*/
@@ -26,7 +28,9 @@
 @media only screen and (max-width: 480px) {
   .menuColumn {
     margin: 1% 0 1% 0%;
-    width: 100%; } }
+    width: 100%; }
+}
+
 /*style title, paragraph and header 2 text*/
 .title, p, h2 {
   font-family: Tahoma, Geneva, sans-serif;
@@ -45,20 +49,19 @@ a {
   font-size: 2em; }
 
 /*style images*/
-img, #weatherSearch, #searchButton {
-  display: block;
-  margin-left: auto;
-  margin-right: auto; }
+img, #weatherSearch, #searchButton{
+    display: block;
+    margin-left: auto;
+    margin-right: auto }
 
 #weatherSearch {
   width: 300px;
   padding: 10px;
   border: 2px solid #7fa5e2;
-  border-radius: 3px; }
+  border-radius: 3px }
 
 #searchButton {
   width: 100px;
   font-size: 2em;
-  margin-top: 1%; }
-
-/*# sourceMappingURL=mystyle.css.map */
+  margin-top: 1%;
+}

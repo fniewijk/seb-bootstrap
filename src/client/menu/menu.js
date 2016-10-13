@@ -1,5 +1,5 @@
 module.exports = function(){
-  
+
   $(".col").mouseover(function(){
     $(this).css('background-color', '#598ad9');
     $(this).css('border-radius', '3px');
@@ -18,12 +18,6 @@ module.exports = function(){
   $("h1").mouseout(function(){
     $(this).css('background-color', '#7fa5e2');
     $(this).css('border-radius', '8px');
-  });
-
-  $("button").click(function(){
-    $.get(window.location.href, function(data, status){
-        alert(window.location.href.toString());
-    });
   });
 
 }
