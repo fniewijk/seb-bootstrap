@@ -27,6 +27,7 @@
   .menuColumn {
     margin: 1% 0 1% 0%;
     width: 100%; } }
+
 /*style title, paragraph and header 2 text*/
 .title, p, h2 {
   font-family: Tahoma, Geneva, sans-serif;
@@ -60,5 +61,3 @@ img, #weatherSearch, #searchButton {
   width: 100px;
   font-size: 2em;
   margin-top: 1%; }
-
-/*# sourceMappingURL=mystyle.css.map */

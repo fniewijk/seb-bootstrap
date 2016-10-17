@@ -45,17 +45,11 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var menuFunction = __webpack_require__(1);
+	__webpack_require__(2);
 
 	$(document).ready(function(){
 
 	  menuFunction();
-
-	  document.getElementById("weatherSearch").addEventListener("search", myFunction);
-
-	  function myFunction() {
-	    var x = document.getElementById("weatherSearch");
-	    document.getElementById("demo").innerHTML = "You are searching for weather in: " + x.value;
-	  }
 
 	});
 
@@ -65,7 +59,7 @@
 /***/ function(module, exports) {
 
 	module.exports = function(){
-	  
+
 	  $(".col").mouseover(function(){
 	    $(this).css('background-color', '#598ad9');
 	    $(this).css('border-radius', '3px');
@@ -86,14 +80,14 @@
 	    $(this).css('border-radius', '8px');
 	  });
 
-	  $("button").click(function(){
-	    $.get(window.location.href, function(data, status){
-	        alert(window.location.href.toString());
-	    });
-	  });
-
 	}
 
+
+/***/ },
+/* 2 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
 
 /***/ }
 /******/ ]);
