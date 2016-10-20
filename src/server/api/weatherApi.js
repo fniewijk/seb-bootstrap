@@ -20,9 +20,7 @@ const getWeather = function(query) {
       method: 'GET'
   };
 
-  return new api.apiCall(options).then(function(data){
-      return data;
-  });
+  return new api.apiCall(options);
 }
 
 module.exports = {

@@ -6,16 +6,16 @@ const app = express();
 app.get('/', function (req, res) {
 
   if(req.query.weatherSearch) {
-    weatherApi.getLocationKey(req.query.weatherSearch).then(function(key){
+    weatherApi.getLocationKey(req.query.weatherSearch.replace(/\s+/g, '')).then(function(key){
       weatherApi.getWeather(key).then(function(data){
         res.render('weather', {'title': 'Seb loves the weather', 'location': req.query.weatherSearch, 'data': data});
         }, function(error){
           console.log('get weather', error);
-          res.render('weather',{ 'data': 'something went wrong' });
+          res.render('weather',{ 'location': 'Could not get weather' });
         });
     }, function(error){
       console.log('get location key weather', error);
-      res.render('weather',{ 'data': 'something went wrong' });
+      res.render('weather',{ 'location': 'Cannot find location' });
     });
   }
   else {

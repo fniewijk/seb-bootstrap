@@ -2,5 +2,26 @@
   {{ title }}
 </div>
 <div>
-  <img src="http://previews.123rf.com/images/mkistryn/mkistryn1201/mkistryn120100050/12048345-collage-with-regional-italian-french-and-polish-cheese-on-food-fairs-in-Italy-Poland-and-France-Stock-Photo.jpg" style="width:60%"></img>
+<div class="cheeseColumn">
+  <table border="1" cellpadding="3" cellspacing="3" width="100%">
+    <col width="50%">
+    <col width="50%">
+    <tr>
+      <th>Cheese</th>
+      <th>Taste</th>
+    <tr>
+    {{#each data}}
+    <tr>
+      <td>{{cheese}}</td>
+      <td>{{taste_out_of_5}}</td>
+    </tr>
+    {{/each}}
+  </table>
+</div>
+<div class="cheeseColumn">
+  <iframe src="https://fieldbook.com/forms/30ab2960-f827-4996-8ce4-97055a432d13?context=iframe" width="100%" height="50%" style="border:1px solid black;"></iframe>
+</div>
+<div class="cheeseColumn">
+  <img src="http://previews.123rf.com/images/mkistryn/mkistryn1201/mkistryn120100050/12048345-collage-with-regional-italian-french-and-polish-cheese-on-food-fairs-in-Italy-Poland-and-France-Stock-Photo.jpg" style="width:100%"></img>
+</div>
 </div>

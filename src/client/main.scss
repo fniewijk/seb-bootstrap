@@ -6,8 +6,7 @@ $color: #7fa5e2;
   padding: 0px;
   margin: 0px;
   text-align: center;
-  font-family: Tahoma, Geneva, sans-serif;
-  font-weight: normal;
+  font-family: 'Avenir Next W02','avenir next',sans-serif;
   background-color: $color;
   border-radius: 8px; }
 
@@ -33,7 +32,7 @@ $color: #7fa5e2;
 
 /*style title, paragraph and header 2 text*/
 .title, p, h2 {
-  font-family: Tahoma, Geneva, sans-serif;
+  font-family: 'Avenir Next W02','avenir next',sans-serif;
   font-size: 1.5em;
   text-align: center;
   margin: 1.5%; }
@@ -49,7 +48,7 @@ a {
   font-size: 2em; }
 
 /*style images*/
-img, #weatherSearch, #searchButton{
+img, #weatherSearch, #searchButton {
     display: block;
     margin-left: auto;
     margin-right: auto }
@@ -64,4 +63,28 @@ img, #weatherSearch, #searchButton{
   width: 100px;
   font-size: 2em;
   margin-top: 1%;
+}
+
+table, iframe {
+  font-family: 'Avenir Next W02','avenir next',sans-serif;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+/*cheeseColumn set up*/
+.cheeseColumn {
+  display: block;
+  float: left;
+  margin: 1% 0% 1% 2%;
+  width: 32%; }
+
+/*allows menu bar to use full width*/
+.cheeseColumn:first-child {
+  margin-left: 0; }
+
+/*each column goes full width below 480px*/
+@media only screen and (max-width: 480px) {
+  .cheeseColumn {
+    margin: 1% 0 1% 0%;
+    width: 100%; }
 }
