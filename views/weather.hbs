@@ -1,19 +1,57 @@
 <div class="title">
   {{ title }}
 </div>
-<div>
-  <form action="/weather" method="get">
-    <input type="search" name="weatherSearch" id="weatherSearch">
-    <input type="submit" value="Search" id="searchButton">
-  </form>
+<div class="weatherColumn">
+  <div>
+    <form action="/weather" method="get">
+      <input type="text" name="weatherSearch" id="weatherSearch">
+      <input type="submit" value="Search" id="searchButton">
+    </form>
+  </div>
+  <div>
+    <h2 id ="location">{{location}}</h2>
+  </div>
+  <div>
+    {{#each data}}
+    <p>Weather: {{WeatherText}}</p>
+    <p>Temperature: {{Temperature.Metric.Value}} {{Temperature.Metric.Unit}}</p>
+    <img src='/assets/images/{{WeatherIcon}}-s.png' style="width:150px"></img>
+    {{/each}}
+  </div>
 </div>
-<div>
-  <h2>{{location}}</h2>
+<div class="weatherColumn">
+  <div id="map" style="width:100%;height:500px"></div>
 </div>
-<div>
-  {{#each data}}
-        <p>Weather: {{WeatherText}}</p>
-        <p>Temperature: {{Temperature.Metric.Value}} {{Temperature.Metric.Unit}}</p>
-        <img src='/assets/images/{{WeatherIcon}}-s.png' style="width:150px"></img>
-  {{/each}}
-</div>
+
+<script>
+function initMap() {
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 10,
+    center: {lat: 51.517155, lng: -0.179665}
+  });
+  var geocoder = new google.maps.Geocoder();
+  var location = document.getElementById('location').textContent;
+  if(location) {
+    geocodeAddress(geocoder, map, location);
+  } else {}
+}
+
+function geocodeAddress(geocoder, resultsMap, location) {
+  geocoder.geocode({'address': location}, function(results, status) {
+    if (status === 'OK') {
+      resultsMap.setCenter(results[0].geometry.location);
+      var marker = new google.maps.Marker({
+        map: resultsMap,
+        position: results[0].geometry.location
+      });
+    } else {
+      console.log(results);
+      alert('Geocode was not successful for the following reason: ' + status);
+    }
+  });
+}
+</script>
+
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?&callback=initMap">
+</script>

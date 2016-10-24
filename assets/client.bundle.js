@@ -45,11 +45,13 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var menuFunction = __webpack_require__(1);
-	__webpack_require__(2);
+	var slideshowFunction = __webpack_require__(2)
+	__webpack_require__(3);
 
 	$(document).ready(function(){
 
 	  menuFunction();
+	  slideshowFunction();
 
 	});
 
@@ -75,6 +77,29 @@
 
 /***/ },
 /* 2 */
+/***/ function(module, exports) {
+
+	module.exports = function(){
+
+	var slideIndex = 0;
+	carousel();
+
+	function carousel() {
+	  var i;
+	  var x = document.getElementsByClassName("mySlides");
+	  for (i = 0; i < x.length; i++) {
+	    x[i].style.display = "none";
+	  }
+	  slideIndex++;
+	  if (slideIndex > x.length) {slideIndex = 1}
+	  x[slideIndex-1].style.display = "block";
+	  setTimeout(carousel, 2000); // Change image every 2 seconds
+	  }
+	}
+
+
+/***/ },
+/* 3 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin

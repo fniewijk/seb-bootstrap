@@ -52,6 +52,8 @@ img, #weatherSearch, #searchButton {
 
 #weatherSearch {
   width: 300px;
+  height: 40px;
+  font-size: 1.5em;
   padding: 10px;
   border: 2px solid #7fa5e2;
   border-radius: 3px; }
@@ -82,3 +84,23 @@ table, iframe {
   .cheeseColumn {
     margin: 1% 0 1% 0%;
     width: 100%; } }
+
+/*weatherColumn set up*/
+.weatherColumn {
+  display: block;
+  float: left;
+  margin: 1% 5% 1% 0%;
+  width: 45%; }
+
+/*allows menu bar to use full width*/
+.weatherColumn:first-child {
+  margin-left: 0; }
+
+/*each column goes full width below 480px*/
+@media only screen and (max-width: 480px) {
+  .weatherColumn {
+    margin: 1% 0 1% 0%;
+    width: 100%; } }
+
+.mySlides {
+  width: 30%; }
