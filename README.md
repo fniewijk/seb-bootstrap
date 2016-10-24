@@ -25,3 +25,7 @@ Sass
 Responsive grid menu
 
 Search weather API
+
+Audio player
+
+Database API
